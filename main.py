@@ -16,7 +16,7 @@ async def main() -> None:
     dp.include_routers(start.router, before_contest.router, user_info.router)
 
     await bot.delete_webhook(drop_pending_updates=True)
-    await dp.start_polling(bot)
+    await dp.start_polling(bot, on_startup=set_commands(bot))
 
 
 if __name__ == "__main__":

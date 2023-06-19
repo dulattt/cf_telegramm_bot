@@ -34,5 +34,5 @@ def main() -> None:
     html = get_html(URL)
     my_data = content(html.text)
 
-    with open("data.json", "w") as file:
+    with open("C:\pys\cfbot\cf\data.json", "w") as file:
         json.dump(my_data, file)
